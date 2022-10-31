@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/mes"
+        android:title="Đoạn chat"
+        android:checked="true"
+        android:color="#03A9F4"/>
+
+    <item
+        android:id="@+id/contact"
+        android:icon="@drawable/person_contact"
+        android:title="Danh bạ"
+        android:color="#03A9F4"/>
+
+
+
+</menu>

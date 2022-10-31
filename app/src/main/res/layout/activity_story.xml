@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryActivity">
+
+    <ImageView
+        android:id="@+id/img_StoryView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pause"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/reverse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <jp.shts.android.storiesprogressview.StoriesProgressView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/stories"
+        android:layout_marginTop="5dp"
+        android:background="#00BCD4"
+        android:gravity="top" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="40dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_UserStory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tao1"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@id/name_UserStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/img_UserStory"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Name"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time_StoryPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/name_UserStory"
+            android:text="Time"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lia_UserView"
+        android:layout_margin="20dp"
+        android:padding="1dp"
+        android:background="@drawable/bg_voew"
+        android:layout_alignParentBottom="true" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:src="@drawable/ic_eye"/>
+        <TextView
+            android:id="@+id/number_UserView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_marginLeft="5dp"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/delete_Story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_delete_forever_24"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@+id/close_Story"/>
+
+    <ImageView
+        android:id="@+id/close_Story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_close_24"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_Emoji"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/comment_Story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bg_commentstory"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Bình Luận"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/comment_Story"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/img_Heart"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.3"
+                android:src="@drawable/heart1" />
+
+            <ImageView
+                android:id="@+id/img_Haha"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.3"
+                android:src="@drawable/haha" />
+
+            <ImageView
+                android:id="@+id/img_Angry"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.3"
+                android:src="@drawable/angry1" />
+
+            <ImageView
+                android:id="@+id/img_Sad"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.3"
+                android:src="@drawable/sad" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

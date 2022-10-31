@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".SearchUserChatActivity">
+    <RelativeLayout
+        android:id="@+id/rel_aaaa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_SearchUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back2" />
+
+        <EditText
+            android:id="@+id/edt_SearchUserChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:padding="1dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/bg_txt1"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Tìm kiếm..." />
+        <ImageView
+            android:id="@+id/clear_TextSeachChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gợi ý"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="1dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_ResultUserChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"/>
+
+
+
+
+
+</LinearLayout>

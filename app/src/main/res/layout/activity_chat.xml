@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChatActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#FFFFFF">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/back_Chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_UserCurrentChat"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/tao1"
+                android:scaleType="centerCrop"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="22dp"
+                android:textColor="#03A9F4"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        android:layout_above="@+id/bottomNavChat">
+        <FrameLayout
+            android:id="@+id/container_Chat"
+            android:layout_width="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_height="match_parent" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <io.ak1.BubbleTabBar
+        android:id="@+id/bottomNavChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        android:elevation="16dp"
+        android:padding="3dp"
+        app:bubbletab_custom_font="@font/poppins_regular"
+        app:bubbletab_disabled_icon_color="#03A9F4"
+        app:bubbletab_horizontal_padding="20dp"
+        app:bubbletab_icon_size="25dp"
+        app:bubbletab_menuResource="@menu/chat"
+        app:bubbletab_tab_corner_radius="25dp"
+        app:bubbletab_title_size="16sp"
+        app:bubbletab_vertical_padding="10dp">
+
+    </io.ak1.BubbleTabBar>
+
+</RelativeLayout>
